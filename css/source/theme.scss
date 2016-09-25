@@ -21,7 +21,7 @@
 
 
 // Override theme settings (see ../../bower_components/reveal.js/css/theme/template/settings.scss)
-$backgroundColor: #222;
+$backgroundColor: #1976D2;
 
 $mainColor: #fff;
 $headingColor: #fff;
@@ -33,7 +33,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #42affa;
+$linkColor: #d58e00;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
@@ -51,3 +51,16 @@ section.has-light-background {
 // Theme template ------------------------------
 @import "../../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
+
+// My styles
+.reveal section img.noborder {
+    background:none;
+    border:none;
+    box-shadow:none;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
