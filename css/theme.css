@@ -289,8 +289,3 @@ body {
   background: none;
   border: none;
   box-shadow: none; }
-
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none; }
