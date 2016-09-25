@@ -1,0 +1,18 @@
+<h2>Arquitectura: componentes</h2>
+
+<pre><code>export class HeroListComponent implements OnInit {
+  heroes: Hero[];
+  selectedHero: Hero;
+
+  constructor(private service: HeroService) { }
+
+  ngOnInit() {
+    this.heroes = this.service.getHeroes();
+  }
+
+  selectHero(hero: Hero) { this.selectedHero = hero; }
+}</code></pre>
+
+<p class="fragment"><strong>Esto NO es un componente. Es la clase que proporcionará la funcionalidad al mismo (más adelante veremos cómo...)</strong></p>
+<p class="fragment">El método <i>ngOnInit</i> es un <a href="https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html">lifecycle hook</a></p>
+
