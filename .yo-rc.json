@@ -1,0 +1,10 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Curso de Angular 2",
+    "packageVersion": "1.0.0",
+    "useSass": true,
+    "deployToGithubPages": true,
+    "githubUsername": "jorgeas80",
+    "githubRepository": "curso-ng2"
+  }
+}
