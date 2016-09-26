@@ -295,3 +295,7 @@ body {
 
 .reveal pre code.wider {
   max-height: 410px; }
+
+.reveal span.exercise {
+  border-left: 5px solid green;
+  background-color: #00AAAA; }
