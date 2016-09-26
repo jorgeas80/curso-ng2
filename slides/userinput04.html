@@ -1,0 +1,19 @@
+<h2>Eventos de entrada de usuario</h2>
+
+<p class="fragment">Mediante el uso de las <i>template reference variables</i>, podemos acceder al contenido de otros campos</p>
+<p class="fragment">Definimos una variable de ese tipo en nuestro elemento HTML precediendo un identificador con el caracter <i>hash</i> (#)</p>
+
+<pre class="fragment"><code>@Component({
+  selector: 'key-up2',
+  template: `
+    <input #box (keyup)="onKey(box.value)">
+    <p>{{values}}</p>
+  `
+})
+export class KeyUpComponent_v2 {
+  values = '';
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
+}
+</code></pre>

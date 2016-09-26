@@ -58,3 +58,11 @@ section.has-light-background {
     border:none;
     box-shadow:none;
 }
+
+.reveal pre.wider {
+    width: 100%;
+}
+
+.reveal pre code.wider {
+    max-height: 410px;
+}
