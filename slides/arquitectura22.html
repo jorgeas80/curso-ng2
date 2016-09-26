@@ -1,0 +1,14 @@
+<h2>Arquitectura: servicios</h2>
+
+<p class="fragment">Cualquier apartado de nuestra aplicación que no se ocupe de gestionar la interfaz de usuario, debería ser implementado como servicio.</p>
+<p class="fragment">Un servicio se implementa como una clase normal y corriente</p>
+
+<pre class="fragment"><code>export class Logger {
+  log(msg: any)   { console.log(msg); }
+  error(msg: any) { console.error(msg); }
+  warn(msg: any)  { console.warn(msg); }
+}</code></pre>
+
+
+
+

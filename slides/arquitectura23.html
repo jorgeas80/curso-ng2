@@ -1,0 +1,23 @@
+<h2>Arquitectura: servicios</h2>
+
+<p class="fragment">Como clase, puede tener un constructor que recibe parámetros, y miembros privados</p>
+
+<pre class="fragment"><code>export class HeroService {
+  private heroes: Hero[] = [];
+
+  constructor(
+    private backend: BackendService,
+    private logger: Logger) { }
+
+  getHeroes() {
+    this.backend.getAll(Hero).then( (heroes: Hero[]) => {
+      this.logger.log(`Fetched ${heroes.length} heroes.`);
+      this.heroes.push(...heroes); // fill cache (spread syntax https://goo.gl/inzydZ)
+    });
+    return this.heroes;
+  }
+}</code></pre>
+
+
+
+

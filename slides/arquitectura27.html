@@ -1,0 +1,17 @@
+<h2>Arquitectura: inyección de dependencias</h2>
+
+<p class="fragment">Los servicios son <a href="https://en.wikipedia.org/wiki/Singleton_pattern">Singleton</a> compartidos entre todos los componentes del módulo</p>
+<p class="fragment">No obstante, se pueden definir <strong>a nivel de componente</strong></p>
+
+<pre class="fragment"><code>import { Component } from '@angular/core';
+import { BooksService } from './books.service';
+@Component({
+selector: 'app-root',
+templateUrl: './app.component.html',
+providers: 'BooksService'
+})
+export class AppComponent {
+constructor(private booksService: BooksService){}</code></pre>
+
+<p class="fragment text-danger">OJO: Por cada componente que se creara, se instanciaría un servicio nuevo</p>
+
