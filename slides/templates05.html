@@ -1,0 +1,9 @@
+<h2>Sintáxis de plantillas</h2>
+
+<h3 class="fragment"><strong>Safe navigation operator (?)</strong></h3>
+<p class="fragment">Nos ahorra un <i>ngIf</i> o estrategia parecida para mostrar condicionalmente un atributo de un objeto</p>
+
+<pre class="fragment"><code>The current hero's name is {{currentHero?.firstName}}
+<!-- No hero, no problem! -->
+The null hero's name is {{nullHero?.firstName}}
+</code></pre>

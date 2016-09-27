@@ -1,0 +1,10 @@
+<h2>Formularios: Envío de formulario</h2>
+
+<p class="fragment">Antes de enviar el formulario, podemos querer hacer comprobaciones.</p>
+
+<pre class="fragment"><code><form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <!-- Formulario aqui -->
+</form></code></pre>
+
+<p class="fragment">También hemos usado otra <i>template reference variable</i>, en concreto <i>#heroForm</i></p>
+<p class="fragment">No ha hecho falta declarar la directiva <i>ngForm</i>. Lo hace Angular 2 solo</p>

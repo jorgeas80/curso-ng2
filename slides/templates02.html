@@ -1,0 +1,16 @@
+<h2>Sintáxis de plantillas</h2>
+
+<p class="fragment">El modo más sencillo de <i>data binding</i> es la <strong>interpolación</strong></p>
+
+<pre class="fragment"><code><h3>
+  {{title}}
+  <img src="{{heroImageUrl}}" style="height:30px">
+</h3>
+</code></pre>
+
+<p class="fragment">Lo que hay entre las llaves es una <i>template expression</i>. Algo que Angular 2 evalúa y convierte en cadena de texto</p>
+
+<pre class="fragment"><code class="xsmaller"><!-- "The sum of 1 + 1 is 2" -->
+<p>The sum of 1 + 1 is {{1 + 1}}</p>
+    <!-- "The sum of 1 + 1 is not 4". Valid if getVal is a method of the host component -->
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p></code></pre>

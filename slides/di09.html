@@ -1,0 +1,8 @@
+<h2>Inyección de dependencias: Providers</h2>
+
+<p class="fragment">Puede darse la situación en la que queramos sustituir una clase por otra mejorada que siga la misma interfaz.</p>
+<p class="fragment">Para eso usamos <i>useExisting</i></p>
+
+<pre class="fragment"><code>{ provide: OldLogger, useExisting: NewLogger}</code></pre>
+
+<p class="fragment">En el ejemplo, <i>OldLogger</i> es un <strong>alias</strong> para <i>NewLogger</i></p>

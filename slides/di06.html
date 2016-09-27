@@ -1,0 +1,17 @@
+<h2>Inyección de dependencias</h2>
+
+
+<p class="fragment">Un servicio inyectable puede, a su vez, requerir de otros servicios.</p>
+
+<pre class="fragment"><code>import { Injectable } from '@angular/core';
+import { HEROES }     from './mock-heroes';
+import { Logger }     from '../logger.service';
+@Injectable()
+export class HeroService {
+  constructor(private logger: Logger) {  }
+  getHeroes() {
+    this.logger.log('Getting heroes ...');
+    return HEROES;
+  }
+}
+</code></pre>

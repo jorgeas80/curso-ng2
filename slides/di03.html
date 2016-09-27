@@ -1,0 +1,7 @@
+<h2>Inyección de dependencias</h2>
+
+<p class="fragment"><strong>Otra solución mejor</strong> Delegar la responsabilidad de crear la clase a partir de sus dependencias en un <a href="https://en.wikipedia.org/wiki/Dependency_injection">inyector</a></p>
+<p class="fragment">Al inyector le pasamos tanto la clase a construir como sus dependencias y se encarga del trabajo</p>
+
+<pre class="fragment"><code>injector = ReflectiveInjector.resolveAndCreate([Car, Engine, Tires]);
+    let car = injector.get(Car);</code></pre>

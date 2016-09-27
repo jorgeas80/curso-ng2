@@ -69,7 +69,38 @@
         "forms08.html",
         "forms09.html",
         "forms10.html",
-        "forms11.html"
+        "forms11.html",
+        "forms12.html",
+        "forms13.html",
+        "forms14.html",
+        "formsfinal.html"
+    ],
+    [
+        "di00.html",
+        "di01.html",
+        "di02.html",
+        "di03.html",
+        "di04.html",
+        "di05.html",
+        "di06.html",
+        "di07.html",
+        "di08.html",
+        "di09.html",
+        "di10.html",
+        "di11.html",
+        "di12.html",
+        "di13.html",
+        "di14.html",
+        "di15.html",
+        "di16.html"
+    ],
+    [
+        "templates00.html",
+        "templates01.html",
+        "templates02.html",
+        "templates03.html",
+        "templates04.html",
+        "templates05.html"
     ]
 
 ]

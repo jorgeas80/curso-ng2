@@ -1,0 +1,20 @@
+<h2>Sintáxis de plantillas</h2>
+
+<p class="fragment">Sin embargo, se pueden utilizar unos operadores nuevos: <i>template expression operators</i></p>
+
+<h3 class="fragment">El operador <strong>pipe (|)</strong></h3>
+<p class="fragment">Se usa como filtro</p>
+
+<pre class="fragment"><code><!-- Pipe chaining: convert title to uppercase, then to lowercase -->
+<div>
+  Title through a pipe chain:
+  {{title | uppercase | lowercase}}
+</div>
+
+<!-- pipe with configuration argument => "February 25, 1970" -->
+<div>Birthdate: {{currentHero?.birthdate | date:'longDate'}}</div>
+
+<!-- Object to JSON -->
+<div>{{currentHero | json}}</div>
+
+</code></pre>
