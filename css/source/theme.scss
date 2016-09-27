@@ -67,6 +67,20 @@ section.has-light-background {
     max-height: 410px;
 }
 
+.reveal pre code.smaller {
+    font-size: 90%;
+}
+
+.reveal pre code.xsmaller {
+    font-size: 75%;
+    line-height: 1.2em;
+}
+
+.reveal pre code.xxsmaller {
+    font-size: 64%;
+    line-height: 1.2em;
+}
+
 .reveal span.exercise {
     border-left: 5px solid green;
     background-color: #00AAAA;

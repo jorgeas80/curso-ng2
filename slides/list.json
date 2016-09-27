@@ -2,6 +2,7 @@
     "index.html",
     "agenda.html",
     [
+        "introduccion00.html",
         "introduccion01.html",
         "introduccion02.html",
         "introduccion03.html",
@@ -13,9 +14,11 @@
         "introduccion09.html",
         "introduccion10.html",
         "introduccion11.html",
-        "introduccion12.html"
+        "introduccion12.html",
+        "introduccionfinal.html"
     ],
     [
+        "arquitectura00.html",
         "arquitectura01.html",
         "arquitectura02.html",
         "arquitectura03.html",
@@ -46,12 +49,27 @@
         "arquitecturafinal.html"
     ],
     [
+        "userinput00.html",
         "userinput01.html",
         "userinput02.html",
         "userinput03.html",
         "userinput04.html",
         "userinput05.html",
         "userinput06.html"
+    ],
+    [
+        "forms00.html",
+        "forms01.html",
+        "forms02.html",
+        "forms03.html",
+        "forms04.html",
+        "forms05.html",
+        "forms06.html",
+        "forms07.html",
+        "forms08.html",
+        "forms09.html",
+        "forms10.html",
+        "forms11.html"
     ]
 
 ]
