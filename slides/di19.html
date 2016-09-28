@@ -1,0 +1,18 @@
+<h2>Inyección de dependencias: non-class dependencies</h2>
+
+<p class="fragment">Usamos un <strong>Opaque Token</strong></p>
+
+<pre class="fragment"><code>import { OpaqueToken } from '@angular/core';
+
+export let APP_CONFIG = new OpaqueToken('app.config');
+</code></pre>
+
+<p class="fragment">Ya podemos pasarlo en el array <i>providers</i></p>
+
+<pre class="fragment"><code>providers: [{ provide: APP_CONFIG, useValue: HERO_DI_CONFIG }]</code></pre>
+
+<p class="fragment">O mediante el uso de <i>@Inject</i>, inyectarlo donde sea necesario</p>
+
+<pre class="fragment"><code>constructor(@Inject(APP_CONFIG) config: AppConfig) {
+  this.title = config.title;
+}</code></pre>

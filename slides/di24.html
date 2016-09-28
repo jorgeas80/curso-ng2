@@ -1,0 +1,18 @@
+<h2>Inyección de dependencias: @Inject e @Injectable</h2>
+
+<p class="fragment">Una posible solución: <strong>usar <i>@Inject</i></strong></p>
+
+<pre class="fragment"><code>import { Inject } from '@angular/core';
+import { Http } from '@angular/http';
+
+class DataService {
+  items:Array&lt;any&gt;;
+
+  constructor(@Inject(Http) http:Http) {
+    ...
+  }
+  ...
+}
+</code></pre>
+
+<p class="fragment"><i>@Inject</i> se encarga de <i>preguntar</i> por los metadatos necesarios para resolver una dependencia</p>

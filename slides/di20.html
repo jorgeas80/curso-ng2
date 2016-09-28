@@ -1,0 +1,21 @@
+<h2>Inyección de dependencias: @Inject e @Injectable</h2>
+
+<p class="fragment">¿Confundido con <i>@Injectable</i> e <i>@Inject</i>?</p>
+<p class="fragment">Supongamos que tenemos un componente que hace uso de un servicio</p>
+<pre class="fragment"><code class="xsmaller">@Component({
+  selector: 'my-app',
+  template: `
+    <ul>
+      <li *ngFor="let item of items">{{item.name}}</li>
+    </ul>
+  `,
+  providers: [DataService]
+})
+class AppComponent {
+  items:Array<any>;
+  constructor(dataService: DataService) {
+    this.items = dataService.getItems();
+  }
+}</code></pre>
+
+

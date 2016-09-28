@@ -1,0 +1,22 @@
+<h2>Inyección de dependencias: @Inject e @Injectable</h2>
+
+<p class="fragment">El servicio es éste</p>
+<pre class="fragment"><code>class DataService {
+  items:Array&lt;any&gt;;
+
+  constructor() {
+    this.items = [
+      { name: 'Christoph Burgdorf' },
+      { name: 'Pascal Precht' },
+      { name: 'thoughtram' }
+    ];
+  }
+
+  getItems() {
+    return this.items;
+  }
+}</code></pre>
+
+<p class="fragment">Sin problema hasta aquí</p>
+
+

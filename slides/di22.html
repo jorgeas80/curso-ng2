@@ -1,0 +1,18 @@
+<h2>Inyección de dependencias: @Inject e @Injectable</h2>
+
+<p class="fragment">Ahora supongamos que nuestro servicio <strong>usa otro servicio a su vez</strong></p>
+<pre class="fragment"><code>import { Http } from '@angular/http';
+
+class DataService {
+  items:Array&lt;any&gt;;
+
+  constructor(http:Http) {
+    ...
+  }
+  ...
+}</code></pre>
+
+
+<p class="fragment">Se producirá un error</p>
+
+<pre class="fragment"><code class="xxsmaller">Cannot resolve all parameters for DataService(?). Make sure they all have valid type or annotations.</code></pre>

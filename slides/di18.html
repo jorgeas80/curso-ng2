@@ -1,0 +1,24 @@
+<h2>Inyección de dependencias: non-class dependencies</h2>
+
+<p class="fragment">Veámoslo con un ejemplo</p>
+
+<pre class="fragment"><code class="xsmaller">export interface AppConfig {
+  apiEndpoint: string;
+  title: string;
+}
+
+export const HERO_DI_CONFIG: AppConfig = {
+  apiEndpoint: 'api.heroes.com',
+  title: 'Dependency Injection'
+};
+</code></pre>
+
+<p class="fragment">Si queremos pasar <i>HERO_DI_CONFIG</i>, ¿qué usamos como token? No tenemos una clase <i>AppConfig</i></p>
+
+<pre class="fragment"><code>// FAIL!  Can't use interface as provider token
+[{ provide: AppConfig, useValue: HERO_DI_CONFIG })]
+</code></pre>
+
+<pre class="fragment"><code>// FAIL! Can't inject using the interface as the parameter type
+constructor(private config: AppConfig){ }
+</code></pre>
