@@ -1,0 +1,17 @@
+<h2>Sintáxis de plantillas: @Input y @Output</h2>
+
+<p class="fragment">Ambos grupos se pueden especificar como atributos del decorador <i>@Component</i></p>
+
+<pre class="fragment"><code>@Component({
+  inputs: ['hero'],
+  outputs: ['deleteRequest'],
+})
+</code></pre>
+
+<p class="fragment">O a nivel individual</p>
+
+<pre class="fragment"><code>@Input()  hero: Hero;
+@Output() deleteRequest = new EventEmitter<Hero>();</code></pre>
+
+<img class="fragment" data-src="resources/img/input-output.png" alt="input-output">
+

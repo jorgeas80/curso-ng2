@@ -1,0 +1,12 @@
+<h2>Sintáxis de plantillas: template reference variables</h2>
+
+<p class="fragment">Otro caso de uso habitual de TRV es acceder a la directiva <i>NgForm</i> que envuelve al <i>HTMLFormElement</i>, y que añade funcionalidad extra al elemento nativo</p>
+
+<pre class="fragment"><code>&lt;form (ngSubmit)=&quot;onSubmit(theForm)&quot; #theForm=&quot;ngForm&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+    &lt;input class=&quot;form-control&quot; name=&quot;name&quot; required [(ngModel)]=&quot;currentHero.firstName&quot;&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot; [disabled]=&quot;!theForm.form.valid&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>

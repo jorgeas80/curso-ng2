@@ -1,2 +1,13 @@
 <h2>Sintáxis de plantillas: template reference variables</h2>
 
+<p class="fragment">Como ya hemos visto, <strong>son referencias a otros elementos del DOM</strong></p>
+<p class="fragment">Sintáxis: <i>#variable</i> ó <i>ref-variable</i></p>
+<p class="fragment">Permiten acceder a otros elementos del DOM (recuerda a <i>getElementById</i>)</p>
+
+<pre class="fragment"><code class="xsmaller"><!-- phone refers to the input element; pass its `value` to an event handler -->
+<input #phone placeholder="phone number">
+<button (click)="callPhone(phone.value)">Call</button>
+
+    <!-- fax refers to the input element; pass its `value` to an event handler -->
+<input ref-fax placeholder="fax number">
+<button (click)="callFax(fax.value)">Fax</button></code></pre>
