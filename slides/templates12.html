@@ -1,0 +1,13 @@
+<h2>Sintáxis de plantillas: property binding</h2>
+
+<p>Lo usamos cuando queremos asignar el resultado de evaluar una <i>template expression</i> a una propiedad de un elemento, directiva o componente </p>
+
+<p class="fragment">El caso más típico es asignar a una de las propiedades de un elemento del DOM un valor calculado en un componente</p>
+
+<pre class="fragment"><code><img [src]="heroImageUrl">
+<button [disabled]="isUnchanged">Cancel is disabled</button>
+</code></pre>
+
+<p class="fragment">También muy útil para asignar un valor a una propiedad de un componente creado por nosotros</p>
+
+<pre class="fragment"><code><hero-detail [hero]="currentHero"></hero-detail></code></pre>

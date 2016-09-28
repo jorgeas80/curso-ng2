@@ -1,0 +1,10 @@
+<h2>Sintáxis de plantillas: class binding</h2>
+
+<p class="fragment">Nos permite añadir y quitar nombres de clases de cualquier elemento</p>
+<p class="fragment">Sintáxis: [class.nombre_clase] ó [class]</p>
+
+<pre class="fragment"><code class="xsmaller"><div [class]="badCurly">Bad curly</div>
+    <!-- toggle the "special" class on/off with a property -->
+<div [class.special]="isSpecial">The class binding is special</div></code></pre>
+
+<p class="fragment">Para cambiar varios nombres a la vez, es mejor usar la directiva <i>ngClass</i> (lo veremos)</p>

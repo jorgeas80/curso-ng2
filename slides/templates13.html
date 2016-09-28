@@ -1,0 +1,18 @@
+<h2>Sintáxis de plantillas: attribute binding</h2>
+
+<p class="fragment">Es el único caso en el que Angular 2 permite <i>binding</i> con atributos</p>
+<p class="fragment">Sintáxis: [attr.nombre_propiedad]</p>
+<p class="fragment">Muy poco común: colspan, svg, aria (no hay propiedades equivalentes a estos atributos)</p>
+
+<pre class="fragment"><code class="xsmaller"><table border=1>
+  <!--  expression calculates colspan=2 -->
+  <tr><td [attr.colspan]="1 + 1">One-Two</td></tr>
+
+    <!-- ERROR: There is no `colspan` property to set!
+      <tr><td colspan="{{1 + 1}}">Three-Four</td></tr>
+    -->
+
+  <tr><td>Five</td><td>Six</td></tr>
+</table>
+    <!-- create and set an aria attribute for assistive technology -->
+<button [attr.aria-label]="actionName">{{actionName}} with Aria</button></code></pre>

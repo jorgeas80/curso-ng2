@@ -1,0 +1,8 @@
+<h2>Sintáxis de plantillas: ngFor trackBy</h2>
+
+<p class="fragment">Con esta sintáxis, podemos especificar una función de seguimiento (<i>tracBy function</i>) que será aplicada a cada uno de los elementos</p>
+<p class="fragment">Esta función devolverá el valor que determina si uno de los elementos ha cambiado realmente o no</p>
+<p class="fragment">Gracias a ello, Angular 2 puede decidir si eliminar o no un elemento del DOM cuando se producen cambios en los elementos a mostrar</p>
+
+<pre class="fragment"><code class="xxsmaller">trackByHeroes(index: number, hero: Hero) { return hero.id; }</code></pre>
+<pre class="fragment"><code class="xxsmaller">&lt;div *ngFor=&quot;let hero of heroes; trackBy:trackByHeroes&quot;&gt;({{hero.id}}) {{hero.fullName}}&lt;/div&gt;</code></pre>

@@ -1,0 +1,14 @@
+<h2>Sintáxis de plantillas: ngClass</h2>
+
+<p class="fragment">Alternativa a <i>class binding</i> cuando queremos cambiar varias clases a la vez</p>
+<pre class="fragment"><code>setClasses() {
+  let classes =  {
+    saveable: this.canSave,      // true
+    modified: !this.isUnchanged, // false
+    special: this.isSpecial,     // true
+  };
+  return classes;
+}
+</code></pre>
+<pre class="fragment"><code><div [ngClass]="setClasses()">This div is saveable and special</div>
+</code></pre>

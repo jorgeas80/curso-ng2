@@ -1,0 +1,14 @@
+<h2>Sintáxis de plantillas: template reference variables</h2>
+
+<p class="fragment">Un caso de uso interesante de TRV es acceder al controlador Angular de otro input de un formulario, como ya vimos</p>
+
+<pre class="fragment"><code>&lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;name&quot;
+       required
+       [(ngModel)]=&quot;model.name&quot; name=&quot;name&quot;
+       #name=&quot;ngModel&quot; &gt;
+&lt;div [hidden]=&quot;name.valid || name.pristine&quot;
+     class=&quot;alert alert-danger&quot;&gt;
+  Name is required
+&lt;/div&gt;
+</code></pre>
