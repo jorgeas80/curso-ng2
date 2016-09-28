@@ -1,0 +1,32 @@
+<h2>Arquitectura: componentes</h2>
+
+<div class="fragment">
+    <p>¿Te sorprende ver un modificador de estilo en un parámetro del constructor?</p>
+    <pre><code>constructor(private service: HeroService) { }</code></pre>
+</div>
+
+<p class="fragment">Es una simplificación de TypeScript</p>
+
+<div class="row">
+    <div class="col-md-6 fragment">
+        <pre><code class="xsmaller">class Person {
+    private firstName: string;
+    private lastName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}</code></pre>
+    </div>
+    <div class="col-md-6 fragment">
+        <pre><code class="xsmaller">class Person {
+    constructor(private firstName: string, private lastName: string) {
+    }
+}</code></pre>
+    </div>
+</div>
+
+<a class="fragment" href="http://www.typescriptlang.org/play/#src=class%20Person%20{%0Aconstructor%28private%20firstName%3A%20string%2C%20private%20lastName%3A%20string%29%20{%0A}%0A}">Compruébalo</a>
+
+
