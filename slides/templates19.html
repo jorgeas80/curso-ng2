@@ -1,0 +1,8 @@
+<h2>Sintáxis de plantillas: ngModel binding</h2>
+
+<p class="fragment">El evento <i>ngModelChange</i> nos permite actuar cuando el valor capturado con <i>ngModel</i> cambie</p>
+<pre class="fragment"><code><!-- If that function exists... -->
+    <input
+    [ngModel]="currentHero.firstName"
+    (ngModelChange)="setUpperCaseFirstName($event)">
+</code></pre>

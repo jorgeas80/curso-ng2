@@ -1,0 +1,14 @@
+<h2>Sintáxis de plantillas: style binding</h2>
+
+<p class="fragment">Nos permite modificar estilos <i>inline</i></p>
+<p class="fragment">Sintáxis: [style.nombre_estilo]</p>
+
+<pre class="fragment"><code class="xsmaller">&lt;button [style.color] = &quot;isSpecial ? 'red': 'green'&quot;&gt;Red&lt;/button&gt;
+&lt;button [style.background-color]=&quot;canSave ? 'cyan': 'grey'&quot; &gt;Save&lt;/button&gt;
+
+    &lt;!-- works with unit extensions, dash-case and camelCase --&gt;
+&lt;button [style.font-size.em]=&quot;isSpecial ? 3 : 1&quot; &gt;Big&lt;/button&gt;
+&lt;button [style.fontSize.%]=&quot;!isSpecial ? 150 : 50&quot; &gt;Small&lt;/button&gt;
+</code></pre>
+
+<p class="fragment">Para cambiar varios estilos a la vez, es mejor usar la directiva <i>ngStyle</i> (lo veremos)</p>

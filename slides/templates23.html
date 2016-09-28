@@ -1,0 +1,12 @@
+<h2>Sintáxis de plantillas: ngIf</h2>
+
+<p class="fragment">Añade o elimina elementos del DOM en función de una expresión</p>
+<pre class="fragment"><code class="xsmaller">&lt;!-- because of the ngIf guard
+    `nullHero.firstName` never has a chance to fail --&gt;
+&lt;div *ngIf=&quot;nullHero&quot;&gt;Hello, {{nullHero.firstName}}&lt;/div&gt;
+
+    &lt;!-- Hero Detail is not in the DOM because isActive is false--&gt;
+&lt;hero-detail *ngIf=&quot;isActive&quot;&gt;&lt;/hero-detail&gt;
+</code></pre>
+
+<p class="fragment text-danger"><strong>OJO </strong> no es lo mismo <strong>eliminar</strong> del DOM (lo que hace ngIf) que ocultar</p>

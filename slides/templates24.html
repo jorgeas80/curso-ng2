@@ -1,0 +1,14 @@
+<h2>Sintáxis de plantillas: ngIf</h2>
+
+<p class="fragment">Ejemplos de ocultación de elementos del DOM (<strong>no se eliminan</strong>)</p>
+<pre class="fragment"><code class="xsmaller"><!-- isSpecial is true -->
+<div [class.hidden]="!isSpecial">Show with class</div>
+<div [class.hidden]="isSpecial">Hide with class</div>
+
+    <!-- HeroDetail is in the DOM but hidden -->
+<hero-detail [class.hidden]="isSpecial"></hero-detail>
+
+<div [style.display]="isSpecial ? 'block' : 'none'">Show with style</div>
+<div [style.display]="isSpecial ? 'none'  : 'block'">Hide with style</div>
+</code></pre>
+

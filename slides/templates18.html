@@ -1,0 +1,15 @@
+<h2>Sintáxis de plantillas: ngModel binding</h2>
+
+<p class="fragment">Nos permite exponer un elemento de nuestro modelo de datos y, al mismo tiempo, asignarle valores a través de acciones del usuario (<i>2-way data binding</i>)</p>
+<pre class="fragment"><code class="xsmaller"><input [(ngModel)]="currentHero.firstName">
+    <!-- Same effect -->
+<input [value]="currentHero.firstName"
+       (input)="currentHero.firstName=$event.target.value" >
+</code></pre>
+<p class="fragment">Para poder usar <i>ngModel</i>, necesitamos añadir <i>FormsModule</i> en el array <i>imports</i> de nuestro módulo</p>
+<pre class="fragment"><code class="xsmaller">@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule
+    ], //...
+})</code></pre>
