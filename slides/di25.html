@@ -1,0 +1,18 @@
+<h2>Inyección de dependencias: @Inject e @Injectable</h2>
+
+<p class="fragment">Otra solución más elegante: <strong>Decorar los servicios que dependan de otros con <i>@Injectable</i></strong></p>
+
+
+<pre class="fragment"><code>import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+
+@Injectable()
+class DataService {
+  items:Array<any>;
+
+  constructor(http:Http) {
+    ...
+  }
+  ...
+}</code></pre>
+
