@@ -1,0 +1,17 @@
+<h2>Entrada de usuario</h2>
+
+<p class="fragment">En cuanto al evento <i>keyup</i>, podemos filtrarlo con <i>key.enter</i>, sin necesidad de comprobar <i>$event.keyCode</i></p>
+
+<pre class="fragment"><code>@Component({
+  selector: 'key-up3',
+  template: `
+    <input #box (keyup.enter)="values=box.value">
+    <p>{{values}}</p>
+  `
+})
+export class KeyUpComponent_v3 {
+  values = '';
+}
+</code></pre>
+
+<p class="fragment">En el ejemplo, Angular 2 filtrará todas las pulsaciones de tecla hasta que pulsemos ENTER</p>

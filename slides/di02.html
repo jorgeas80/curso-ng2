@@ -1,0 +1,21 @@
+<h2>Inyección de dependencias</h2>
+
+<p class="fragment"><strong>La intención </strong>Transferir la responsabilidad de instanciar las dependencias de una clase al usuario de la misma.</p>
+<p class="fragment"><strong>La solución (sub-óptima)</strong> Crear una <a href="https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)">factoría</a> para construir las dependencias y la clase</p>
+
+<pre class="fragment"><code class="xsmaller">import { Engine, Tires, Car } from './car';
+// BAD pattern!
+export class CarFactory {
+  createCar() {
+    let car = new Car(this.createEngine(), this.createTires());
+    car.description = 'Factory';
+    return car;
+  }
+  createEngine() {
+    return new Engine();
+  }
+  createTires() {
+    return new Tires();
+  }
+}
+</code></pre>

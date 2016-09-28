@@ -1,0 +1,12 @@
+<h2>Inyección de dependencias: Providers</h2>
+
+<p class="fragment">El array de <i>providers</i> suele tener este aspecto</p>
+<pre class="fragment"><code>providers: [Logger]</code></pre>
+
+<p class="fragment">Pero realmente, eso es <i>azúcar sintáctico</i> para la forma extendida (token + receta)</p>
+<pre class="fragment"><code>providers: [{ provide: Logger, useClass: Logger }]</code></pre>
+
+<blockquote class="fragment" style="box-shadow: 0px 0px 0px; background: none;">
+    <p>A provider is a recipe for delivering a service associated with a token.</p>
+    <footer><a href="https://angular.io/docs/ts/latest/cookbook/dependency-injection.html#!#providers">angular.io docs</a></footer>
+</blockquote>

@@ -1,0 +1,16 @@
+<h2>Inyección de dependencias: Providers</h2>
+
+<p class="fragment">Podemos seguir usado <i>useFactory</i>, y pasarle un array de dependencias como tercer argumento</p>
+
+
+<pre class="fragment"><code>providers: [
+    ConsoleService,
+    {
+        provide: LogDebugger,
+        useFactory: () => {
+            return new LogDebugger(consoleService, true);
+        },
+        deps: [ConsoleService]
+    }
+]</code></pre>
+

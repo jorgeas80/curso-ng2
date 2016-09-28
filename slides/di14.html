@@ -1,0 +1,10 @@
+<h2>Inyección de dependencias: Providers</h2>
+
+<p class="fragment">Para ello utilizamos <i>useFactory</i>, que nos permite crear una función que instancie la dependencia pasándole parámetros</p>
+
+<pre class="fragment"><code>[{
+    provide: LogDebugger,
+    useFactory: () => {
+        return new LogDebugger(true);
+    }
+}]</code></pre>

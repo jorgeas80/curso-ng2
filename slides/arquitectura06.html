@@ -1,0 +1,16 @@
+<h2>Arquitectura: módulos Angular 2</h2>
+
+<p>Ejemplo de módulo Angular 2</p>
+
+<pre><code>import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+@NgModule({
+  imports:      [ BrowserModule ],
+  providers:    [ Logger ],
+  declarations: [ AppComponent ],
+  exports:      [ AppComponent ],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }</code></pre>
+
+<p>Angular 2 se compone de varios módulos que importaremos según los necesitemos.</p>

@@ -1,0 +1,12 @@
+<h2>Inyección de dependencias: Providers</h2>
+
+<p class="fragment">Otra situación posible es proporcionar como dependencia un objeto ya instanciado, en lugar de hacer que el inyector lo instancie. </p>
+<p class="fragment">Usamos <i>setValue</i> para ello</p>
+
+<pre class="fragment"><code>// An object in the shape of the logger service
+let silentLogger = {
+  logs: ['Silent logger says "Shhhhh!". Provided via "useValue"'],
+  log: () => {}
+};</code></pre>
+
+<pre class="fragment"><code>[{ provide: Logger, useValue: silentLogger }]</code></pre>

@@ -1,0 +1,13 @@
+<h2>Inyección de dependencias: Providers</h2>
+
+<p class="fragment">Otra posible situación es que la dependencia a instanciar tenga a su vez dependencias <strong>solo disponibles en tiempo de ejecución</strong></p>
+
+<pre class="fragment"><code>export class LogDebugger {
+    constructor(private enabled: boolean) {}
+
+    debug(message) {
+        if (this.enabled) {
+            console.log("DEBUG: ${message}");
+        }
+    }
+};</code></pre>

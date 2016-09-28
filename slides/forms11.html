@@ -1,0 +1,12 @@
+<h2>Formularios: Feedback visual</h2>
+
+<p class="fragment">Usamos una <i>template reference variable</i> para acceder al valor de <i>ngModel</i> en cada campo</p>
+
+<pre class="fragment"><code><input type="text" class="form-control" id="name"
+                                   required
+                                   [(ngModel)]="model.name" name="name"
+                                   #name="ngModel" ></code></pre>
+
+<p class="fragment">Asignamos a <i>#name</i> el valor de <i>ngModel</i> porque es el valor con el que se exporta la directiva <i>ngModel</i></p>
+<p class="fragment">Si nos limitáramos a poner <i>#name</i> sin más, como hicimos en el tema de entrada de usuario, a lo que podríamos acceder desde la plantilla es al valor del
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement</a> con el que la API del navegador envuelve a un elemento <i>input</i> común</p>

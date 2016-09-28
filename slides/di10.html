@@ -1,0 +1,12 @@
+<h2>Inyección de dependencias: Providers</h2>
+
+<p class="fragment">Un caso de uso avanzado de esta técnica es <strong>reducir la complejidad de la API ofrecida por un servicio</strong>.</p>
+<pre class="fragment"><code>{ provide: MinimalLogger, useExisting: LoggerService }</code></pre>
+
+<p class="fragment">Imaginemos que <i>LoggerService</i> es un servicio muy complejo, con 20 métodos. Pero a nosotros solo nos interesa 1. Es el que vamos a añadir a <i>MinimalLogger</i></p>
+<pre class="fragment"><code class="xsmaller">// class used as a restricting interface (hides other public members)
+export abstract class MinimalLogger {
+  logInfo: (msg: string) => void;
+  logs: string[];
+}
+</code></pre>

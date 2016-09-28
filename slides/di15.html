@@ -1,0 +1,26 @@
+<h2>Inyección de dependencias: Providers</h2>
+
+<p class="fragment">¿Y si el servicio a instanciar tiene dependencia de otros servicios?</p>
+
+<pre class="fragment"><code>// console.service.ts
+export class ConsoleService {
+    log(message) {
+        console.log(message);
+    }
+}</code></pre>
+
+
+<pre class="fragment"><code class="xsmaller">//log-debugger.service.ts
+import { ConsoleService } from './console.service';
+@Injectable()
+export class LogDebugger {
+    constructor(private consoleService: ConsoleService, private enabled: boolean) {}
+
+    debug(message) {
+        if (this.enabled) {
+            this.consoleService.log('DEBUG: ${message}');
+        }
+    }
+}</code></pre>
+
+

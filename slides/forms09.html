@@ -1,0 +1,14 @@
+<h2>Formularios: Feedback visual</h2>
+
+<p class="fragment">Creamos la siguiente hoja de estilos</p>
+
+<pre class="fragment"><code>.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+</code></pre>
+
+<p class="fragment">Podemos asignársela al componente mediante el uso del atributo <i>styles</i> del decorador <i>@Component</i></p>
