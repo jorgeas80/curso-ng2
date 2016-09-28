@@ -3,7 +3,6 @@
 En proceso.
 
 TODO:
-* Tema de formularios: Hablar de @input y @output (forms05)
 * Tema de formularios: Instalar Bootstrap (forms06)
 * Nuevo tema: Comunicación de componentes y gestión de asincronía
 * Diferentes formas de aplicar estilos
