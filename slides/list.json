@@ -3,9 +3,9 @@
     "agenda.html",
     [
         "introduccion00.html",
+        "introduccion03.html",
         "introduccion01.html",
         "introduccion02.html",
-        "introduccion03.html",
         "introduccion04.html",
         "introduccion05.html",
         "introduccion06.html",
@@ -55,7 +55,7 @@
         "userinput03.html",
         "userinput04.html",
         "userinput05.html",
-        "userinput06.html"
+        "userinputfinal.html"
     ],
     [
         "forms00.html",
@@ -100,7 +100,10 @@
         "templates02.html",
         "templates03.html",
         "templates04.html",
-        "templates05.html"
+        "templates05.html",
+        "templates06.html",
+        "templates07.html",
+        "templates08.html"
     ]
 
 ]

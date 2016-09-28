@@ -12,7 +12,7 @@ export class ConsoleService {
 
 <pre class="fragment"><code class="xsmaller">//log-debugger.service.ts
 import { ConsoleService } from './console.service';
-
+@Injectable()
 export class LogDebugger {
     constructor(private consoleService: ConsoleService, private enabled: boolean) {}
 
