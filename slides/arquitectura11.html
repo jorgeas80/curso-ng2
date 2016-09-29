@@ -1,12 +1,15 @@
 <h2>Arquitectura: componentes</h2>
 
 <pre><code>@Component({
-  selector:    'hero-list',
-  templateUrl: 'hero-list.component.html',
-  providers:  [ HeroService ]
+    selector: 'my-app',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
-export class HeroListComponent implements OnInit {
-/* . . . */
-}}</code></pre>
+export class AppComponent implements OnInit {
+    ngOnInit() {
+        console.log("Component started");
+    }
+}
+</code></pre>
 <p class="fragment">Esto es un componente</p>
 <p class="fragment">Hemos añadido <strong>metadatos</strong> a la clase mediante un <strong>decorador </strong></p>
