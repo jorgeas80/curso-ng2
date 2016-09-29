@@ -2,11 +2,8 @@
 
 <p class="fragment">Las plantillas son ficheros con código HTML que dicen cómo renderizar el componente</p>
 <p class="fragment">Pueden incluir un cierto grado de lógica (repetición de elementos, visualización condicional...) además de estilos propios</p>
-<pre class="fragment"><code class="xsmaller"><h2>Hero List</h2>
-<p><i>Pick a hero from the list</i></p>
-<ul>
-  <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
-    {{hero.name}}
-  </li>
-</ul>
-<hero-detail *ngIf="selectedHero" [hero]="selectedHero"></hero-detail></code></pre>
+<pre class="fragment"><code class="xsmaller">&lt;h1&gt;Hello from Angular 2 App with Webpack&lt;/h1&gt;
+
+&lt;h2&gt;This is the beginning of Fibonacci sequence&lt;/h2&gt;
+
+&lt;span *ngFor=&quot;let f of fib&quot;&gt; {{f}} &lt;/span&gt;</code></pre>

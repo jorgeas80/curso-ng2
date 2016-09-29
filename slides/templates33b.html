@@ -1,0 +1,15 @@
+<h2>Sintáxis de plantillas: @Input y @Output</h2>
+
+<p class="fragment">El objeto <i><a href="https://angular.io/docs/ts/latest/api/core/index/EventEmitter-class.html">EventEmitter</a></i> se utiliza para emitir un evento</p>
+
+<p class="fragment">En el ejemplo anterior:</p>
+
+<pre class="fragment"><code class="xsmaller">// Asi declaro el objeto
+@Output() deleteRequest = new EventEmitter&lt;Hero&gt;();
+
+// Asi lanzo el evento. El que lo recoja, recibirá "Borrado" en el argumento $event del capturador
+deleteRequest.emit("Borrado");
+</code></pre>
+
+<p class="fragment">En el receptor del evento, <i>$event</i> tendrá como valor el argumento de la función <i>emit</i></p>
+<p class="fragment">En los eventos nativos del DOM, <i>$event</i> es siempre una instancia del <a href="https://developer.mozilla.org/en-US/docs/Web/Events">DOM Element Object</a></p>

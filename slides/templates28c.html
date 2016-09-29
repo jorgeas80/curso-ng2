@@ -1,0 +1,10 @@
+<h2>Sintáxis de plantillas: directivas personalizadas</h2>
+
+<p class="fragment">A la hora de crear directivas, debemos conocer dos clases fundamentales</p>
+
+<ul>
+    <li class="fragment"><strong><a href="https://angular.io/docs/ts/latest/api/core/index/ElementRef-class.html">ElementRef</a></strong> nos da acceso al elemento nativo del DOM. <span class="text-danger text-uppercase">Inseguro.</span></li>
+    <li class="fragment"><strong><a href="https://angular.io/docs/ts/latest/api/core/index/HostListener-interface.html">HostListener</a></strong> nos permite excuchar cualquier evento del host en el que se encuentre la aplicación</li>
+</ul>
+
+<p class="fragment text-danger"><strong>Angular desaconseja el uso de <i>ElementRef</i> por peligro de <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">ataque XSS</a>. Alguien podría insertar scripts maliciosos en nuestro DOM...</strong></p>

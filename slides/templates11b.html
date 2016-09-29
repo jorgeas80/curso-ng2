@@ -1,0 +1,16 @@
+<h2>Arquitectura: data binding</h2>
+
+<p class="fragment">De los posibles objetivos tabulados, vamos a deternos en 3</p>
+
+<pre class="fragment"><code class="xsmaller"><!-- Objetivo es una propiedad de un componente -->
+<hero-detail [hero]="currentHero"></hero-detail>
+
+<!-- Objetivo es un evento lanzado en un componente -->
+<hero-detail (deleteRequest)="deleteHero()"></hero-detail>
+
+<!-- Objetivo es un evento lanzado en una directiva no estándar -->
+<div (myClick)="clicked=$event">click me</div>
+</code></pre>
+
+<p class="fragment">En los 3 casos se repite un patrón: <strong>El objetivo del data binding no es una propiedad/evento estándar del DOM de HTML5</strong></p>
+<p class="fragment">Son propiedades y eventos que han sido creadas a través de la API de Angular 2</p>
