@@ -2,11 +2,9 @@
 
 <p class="fragment">Usamos una <i>template reference variable</i> para acceder al controlador Angular de otro input del formulario, enlazado con el modelo mediante <i>ngModel</i></p>
 
-<pre class="fragment"><code><input type="text" class="form-control" id="name"
-                                   required
-                                   [(ngModel)]="model.name" name="name"
-                                   #name="ngModel" ></code></pre>
+<pre class="fragment"><code class="smaller">&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;John&quot; #firstName=&quot;ngModel&quot; name=&quot;firstName&quot; [(ngModel)]=&quot;user.firstName&quot; required&gt;
+</code></pre>
 
-<p class="fragment">Asignamos a <i>#name</i> el valor de <i>ngModel</i> porque es el valor con el que se exporta la directiva <i>ngModel</i></p>
-<p class="fragment">Si nos limitáramos a poner <i>#name</i> sin más, como hicimos en el tema de entrada de usuario, a lo que podríamos acceder desde la plantilla es al valor del
+<p class="fragment">Asignamos a <i>#firstName</i> el valor de <i>ngModel</i> porque es el valor con el que se exporta la directiva <i>ngModel</i></p>
+<p class="fragment">Si nos limitáramos a poner <i>#firstName</i> sin más, como hicimos en el tema de entrada de usuario, a lo que podríamos acceder desde la plantilla es al valor del
     <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement</a> con el que la API del navegador envuelve a un elemento <i>input</i> común</p>

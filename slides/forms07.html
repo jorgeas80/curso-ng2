@@ -1,31 +1,7 @@
 <h2>Formularios: Data binding</h2>
 
-<p class="fragment">Unamos los datos del formulario al modelo</p>
-<pre class="fragment"><code class="xxsmaller"><div class="container">
-    <h1>Hero Form</h1>
-    <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name"
-                 required
-                 [(ngModel)]="model.name" name="name">
-        </div>
-        <div class="form-group">
-          <label for="alterEgo">Alter Ego</label>
-          <input type="text"  class="form-control" id="alterEgo"
-                 [(ngModel)]="model.alterEgo" name="alterEgo">
-        </div>
-        <div class="form-group">
-          <label for="power">Hero Power</label>
-          <select class="form-control"  id="power"
-                  required
-                  [(ngModel)]="model.power" name="power">
-            <option *ngFor="let p of powers" [value]="p">{{p}}</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-</div>
+<p class="fragment">Esto une los datos del formulario al modelo</p>
+<pre class="fragment"><code class="smaller">&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;John&quot; #firstName=&quot;ngModel&quot; name=&quot;firstName&quot; [(ngModel)]=&quot;user.firstName&quot; required&gt;
 </code></pre>
 
 <p class="fragment"><i>name</i> <a href="https://angular.io/docs/ts/latest/guide/forms.html">es necesario</a> para poder usar <i>ngModel.</i></p>

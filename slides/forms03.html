@@ -1,13 +1,15 @@
 <h2>Formularios: Crear modelo</h2>
 
-<p class="fragments">Creamos la clase que representará nuestro modelo de datos</p>
+<p class="fragments">Si queremos que el formulario directamente <i>alimente</i> a nuestro modelo de datos, creamos la clase que representará dicho modelo</p>
 
-<pre class="fragment"><code>export class Hero {
-  constructor(
-    public id: number,
-    public name: string,
-    public power: string,
-    public alterEgo?: string
-  ) {  }
-}
-</code></pre>
+<pre class="fragment"><code>export class User {
+
+    constructor(
+        public firstName: string,
+        public lastName: string,
+        public gender: string,
+        public hiking?: string,
+        public running?: string,
+        public swimming?: string
+    ) { }
+}</code></pre>
