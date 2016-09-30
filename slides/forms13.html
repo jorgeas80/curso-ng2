@@ -2,10 +2,10 @@
 
 <p class="fragment">Antes de enviar el formulario, podemos querer hacer comprobaciones.</p>
 
-<pre class="fragment"><code><form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+<pre class="fragment"><code>&lt;form #form=&quot;ngForm&quot; (ngSubmit)=&quot;submitForm(form.value)&quot;&gt;
     <!-- Formulario aqui -->
-</form></code></pre>
+&lt;form&gt;</code></pre>
 
-<p class="fragment">También hemos usado otra <i>template reference variable</i>, en concreto <i>#heroForm</i></p>
+<p class="fragment">También hemos usado otra <i>template reference variable</i>, en concreto <i>#form</i></p>
 <p class="fragment">La directiva <i>ngForm</i> envuelve al <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement</a> que representa el formulario</p>
 <p class="fragment">Es una directiva que Angular 2 instancia y guarda información sobre las validaciones</p>

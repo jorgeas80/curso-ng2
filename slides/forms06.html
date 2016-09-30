@@ -1,27 +1,21 @@
 <h2>Formularios: Crear plantilla</h2>
 
 <p class="fragment">Una plantilla básica para formulario, usando Bootstrap</p>
-<pre class="fragment"><code class="xsmaller"><div class="container">
-    <h1>Hero Form</h1>
-    <form>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required>
-      </div>
-      <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
-      </div>
-      <div class="form-group">
-        <label for="power">Hero Power</label>
-        <select class="form-control" id="power" required>
-          <option *ngFor="let p of powers" [value]="p">{{p}}</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-</div>
+<pre class="fragment"><code class="xxxsmaller">&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;h2&gt;Template Driven Form&lt;/h2&gt;
+  &lt;form #form=&quot;ngForm&quot; (ngSubmit)=&quot;submitForm(form.value)&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label&gt;First Name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;John&quot; #firstName=&quot;ngModel&quot; name=&quot;firstName&quot; [(ngModel)]=&quot;user.firstName&quot; required&gt;
+      &lt;div [hidden]=&quot;firstName.valid || firstName.pristine&quot; class=&quot;alert alert-danger&quot;&gt;First name is required&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label&gt;Last Name&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Doe&quot; #lastName=&quot;ngModel&quot; name=&quot;lastName&quot; [(ngModel)]=&quot;user.lastName&quot; required&gt;
+      &lt;div [hidden]=&quot;lastName.valid || lastName.pristine&quot; class=&quot;alert alert-danger&quot;&gt;Last name is required&lt;/div&gt;
+    &lt;/div&gt;
+    <!-- CONTINUA ... -->
+  &lt;/form&gt;
+&lt;/div&gt;
 </code></pre>
 
-<p class="fragment small">TODO: Como instalar Bootstrap</p>
-<p class="fragment small">Teóricamente basta con añadir el link al CSS de Bootstra en el head</p>

@@ -1,20 +1,30 @@
 <h2>Formularios: Crear componente</h2>
 
-<p class="fragment">Creamos el componente para gestionar la entrada de usuario y los eventos propios del formulario</p>
+<p class="fragment">Creamos el componente</p>
 
-<pre class="fragment"><code class="smaller">import { Component } from '@angular/core';
-import { Hero }    from './hero';
+<pre class="fragment"><code class="xxsmaller">import { Component, OnInit } from '@angular/core';
+import { User } from './user';
+
 @Component({
-  selector: 'hero-form',
-  templateUrl: 'hero-form.component.html'
+  selector: 'simple-form',
+  templateUrl: './simpleform.component.html',
+  styleUrls: ['./simpleform.component.css']
 })
-export class HeroFormComponent {
-  powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
-  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
-  submitted = false;
-  onSubmit() { this.submitted = true; }
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
+export class SimpleformComponent implements OnInit {
+  user: User;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.user = new User('', '', '');
+  }
+
+  submitForm(form: any): void{
+    console.log('Form Data: ');
+    console.log(form);
+
+    // user.firstName = form.firstName
+    // ...
+  }
 }
 </code></pre>
