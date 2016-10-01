@@ -149,6 +149,23 @@
         "templates30.html",
         "templates31.html",
         "templatesfinal.html"
+    ],
+    [
+        "comunicaciones00.html",
+        "comunicaciones01.html",
+        "comunicaciones02.html",
+        "comunicaciones02b.html",
+        "comunicaciones03.html",
+        "comunicaciones04.html",
+        "comunicaciones05.html",
+        "comunicaciones06.html",
+        "comunicaciones07.html",
+        "comunicaciones08.html",
+        "comunicaciones09.html",
+        "comunicacionesfinal.html"
+    ],
+    [
+        "tests00.html",
+        "testsfinal.html"
     ]
-
 ]

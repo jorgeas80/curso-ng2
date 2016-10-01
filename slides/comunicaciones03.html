@@ -1,0 +1,12 @@
+<h1>Comunicaciones</h1>
+
+<p class="fragment">Angular 2 simplifica las llamadas a las APIs de XHR y JSONP mediante <a href="https://angular.io/docs/ts/latest/guide/server-communication.html#!#http-client">su propio cliente HTTP</a></p>
+
+<p class="fragment">Ejemplo de llamada HTTP GET hecha con dicha librería</p>
+
+<pre class="fragment"><code>http.get(url).subscribe(
+response => console.log(response.json()),
+error => console.error(error)
+);</code></pre>
+
+<p class="fragment"><i>http</i> representa una variable de tipo <a href="https://angular.io/docs/ts/latest/api/http/index/Http-class.html">Http</a></p>

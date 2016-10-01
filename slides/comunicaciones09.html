@@ -1,0 +1,11 @@
+<h1>Comunicaciones</h1>
+
+<p class="fragment">Los observables tienen, como mínimo, tres ventajas con respecto a las promesas</p>
+
+<ul>
+    <li class="fragment">Los observables son <i>vagos</i>. Se deben lanzar explícitamente. Las promesas se lanzan al crearse.</li>
+    <li class="fragment">En el caso particular de Angular 2, los observables son de tipo <i><a href="https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/creating.md#cold-vs-hot-observables">cold</a></i>. Es decir <strong>No se ejecutan hasta que alguien se <i>suscribe</i> a ellos.</strong></li>
+    <li class="fragment">Los observables se pueden cancelar. Las promesas no.</li>
+</ul>
+
+<p class="fragment text-success"><strong>Observable = asynchronous immutable array.</strong></p>
