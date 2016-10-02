@@ -1,0 +1,23 @@
+<h1>Comunicaciones</h1>
+
+<p class="fragment">Para poder usar ambas apis, necesitamos importar los módulos <i><a href="https://angular.io/docs/ts/latest/api/http/index/HttpModule-class.html">HttpModule</a></i> y <i><a
+    href="https://angular.io/docs/ts/latest/api/http/index/JsonpModule-class.html">JSONPModule</a></i></p>
+
+<pre class="fragment"><code class="xxsmaller">import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule, JsonpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    JsonpModule
+  ],
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }</code></pre>
