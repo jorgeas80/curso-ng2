@@ -1,0 +1,4 @@
+<h1>Tests: Dependencias asíncronas</h1>
+
+<p class="fragment">La función <i><a href="https://angular.io/docs/ts/latest/api/core/testing/index/async-function.html">async</a></i> crea un <i>sandbox</i> que intercepta todas las promesas lanzadas desde dentro. Solo nos tenemos que preocupar de capturar una promesa: la que devuelva la función <i><a href="https://angular.io/docs/ts/latest/api/core/testing/index/ComponentFixture-class.html#!#whenStable-anchor">fixture.whenStable</a></i> </p>
+<p class="fragment">Cuando esa promesa se resuelva, estaremos seguros de que no hay llamadas asíncronas pendientes.</p>

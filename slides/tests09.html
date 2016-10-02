@@ -1,0 +1,17 @@
+<h1>Tests: Dependencias asíncronas</h1>
+
+<p class="fragment">La función <a href="https://angular.io/docs/ts/latest/api/core/testing/index/fakeAsync-function.html">fakeAsync</a> crea un  <i>sandbox</i> en el que se puede simular el paso del tiempo mediante llamadas a la función <i>tick(milisecs)</i>. De esta forma, podemos programar de manera síncrona aunque hagamos llamadas asíncronas</p>
+
+<pre class="fragment"><code class="xxxsmaller">describe('this test', () => {
+  it('looks async but is synchronous', <any>fakeAsync((): void => {
+       var flag = false;
+       setTimeout(() => { flag = true; }, 100);
+       expect(flag).toBe(false);
+       tick(50);
+       expect(flag).toBe(false);
+       tick(50);
+       expect(flag).toBe(true);
+     }));
+});
+</code></pre>
+
