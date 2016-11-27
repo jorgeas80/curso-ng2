@@ -1,0 +1,21 @@
+<h2>Sintáxis de plantillas: pipes</h2>
+
+<p class="fragment">La creación de un pipe es realmente sencilla</p>
+
+<pre class="fragment"><code class="xsmaller">import { Pipe, PipeTransform } from '@angular/core';
+/*
+ * Raise the value exponentially
+ * Takes an exponent argument that defaults to 1.
+ * Usage:
+ *   value | exponentialStrength:exponent
+ * Example:
+ *   {{ 2 |  exponentialStrength:10}}
+ *   formats to: 1024
+*/
+@Pipe({name: 'exponentialStrength'})
+export class ExponentialStrengthPipe implements PipeTransform {
+  transform(value: number, exponent: string): number {
+    let exp = parseFloat(exponent);
+    return Math.pow(value, isNaN(exp) ? 1 : exp);
+  }
+}</code></pre>
